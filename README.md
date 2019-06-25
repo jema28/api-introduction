@@ -4,20 +4,20 @@
 
 An API is the way applications speak to each other.
 
-API calls follow a request/response pattern. We request information, we recieve that information as a response. Every time we open a browser, or go to a website we are making a request to a server, what we see is the response from the server.
+API calls follow a request/response pattern. We request information and we receive that information as a response. Every time we open a browser, or go to a website we are making a request to a server and what we see is the response from the server.
 
-This week we'll be looking at your personal application, at other appliations and getting information from them. Now, We will be querying others APIs but in the future, when we have our own servers, we will be querying our own.
+This week we'll be looking at your personal applications and at other applications and getting information from them. We will be querying others APIs for now but later, when we have our own servers, we will be querying our own.
 
 Typical example of website using an external API of this type - ask the class for examples. e.g. trivago / comparison websites
 
 ## Fetch API
 
-Fetch is a way of making API calls. It takes a url
+Fetch is a way of making API calls. It takes a url:
 ```
 https://api.github.com/users/chriscoyier/repos
 ```
 
-The first part (`https://api.github.com`) - domain name - is like the address of a block of flats. The second part (`users/chriscoyier/repos`) is what we call an endpoint, This specifies a specific flat. The fetch function goes to the address that we give it and asks for information at that address.
+The first part (`https://api.github.com`) - domain name - is like the address of a block of flats. The second part (`users/chriscoyier/repos`) is what we call an endpoint; this specifies a specific flat. The fetch function goes to the address that we give it and asks for information at that address.
 
 By default the Fetch API uses the GET method e.g.
 
@@ -43,10 +43,8 @@ Note: There are different HTTP methods other than GET. HTTP (Hypertext Transfer 
 **PUT:** creating or updating data (overwriting data if it already exists).
 **DELETE:** deletes data.
 
-### JSON
-When we send information between applications it needs to be packaged up, and unpackaged when it is received. We do this using `JSON.stringify()` to package, and `JSON.parse()` to unpackage.
-
-JSON is a lightweight format that allows data to be transferred across the web by using key-value pairs.
+#### JSON
+JSON is a lightweight format that allows data to be transferred across the web by using key-value pairs. When we send information between applications it needs to be packaged up, and unpackaged when it is received. We do this using `JSON.stringify()` to package and `JSON.parse()` to unpackage.
 
 ### Exercise: write a fetch request that lists your repos
 
