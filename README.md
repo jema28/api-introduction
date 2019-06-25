@@ -74,8 +74,7 @@ Status codes tell us if a request was successful. The main groups are:
 
 ### Fix a broken API request
 
-- You will need to clone the repository and work on the code locally
-- Open `index.html` in the browser and you will see that the API request is not working
-- Open `main.js` and look for what's broken or missing in the code.
+- Clone the repo and open `fix-broken-request/index.html` in the browser. You will see that the API request is not working.
+- Open `main.js` and fix the broken code 😎
 
 
