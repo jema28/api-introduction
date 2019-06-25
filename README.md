@@ -65,10 +65,10 @@ fetch('https://api.github.com/users/<githubhandle>/repos')
   - `Response.headers`: HTTP headers allow the client and the server to pass additional information with the request or the response. An example are status codes.
 
 Status codes tell us if a request was successful. The main groups are:
-2: Success codes. e.g. `200`
-3: Redirection e.g. `302`
-4: Error, Unfound e.g. `404`
-5: Server Error e.g. `500`
+- 2: Success codes. e.g. `200`
+- 3: Redirection e.g. `302`
+- 4: Error, Unfound e.g. `404`
+- 5: Server Error e.g. `500`
 
 ### Fix a broken API request
 
