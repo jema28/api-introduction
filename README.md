@@ -52,7 +52,7 @@ JSON is a lightweight format that allows data to be transferred across the web b
 
 Let's inspect the `response` object we receive in more depth:
 
-- Type/copy the following into the console:
+- Type/copy the following into the console. Remember to replace `<githubhandle>` with yours:
 
 ```js
 fetch('https://api.github.com/users/<githubhandle>/repos')
@@ -64,17 +64,16 @@ fetch('https://api.github.com/users/<githubhandle>/repos')
   });
 ```
 
-Note:
-
-- `Response.body` is a readable stream of the response's body
-
-- `Response.headers` HTTP headers allow the client and the server to pass additional information with the request or the response. An example are status codes.
+- Look at the object that comes back. Notice:
+  - `Response.body`: the readable stream of the response's body.
+  - `Response.headers`: HTTP headers allow the client and the server to pass additional information with the request or the response. An example are status codes.
 
 Status codes tell us if a request was successful. The main groups are:
-2: Success codes. e.g. `200`
-3: Redirection e.g. `302`
-4: Error, Unfound e.g. `404`
-5: Server Error e.g. `500`
+
+- 2: Success codes. e.g. `200`
+- 3: Redirection e.g. `302`
+- 4: Error, Unfound e.g. `404`
+- 5: Server Error e.g. `500`
 
 ### Exercise: Use Open Movie Database API to fetch Harry Potter films and make a poster gallery.
 
