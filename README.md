@@ -77,7 +77,7 @@ Status codes tell us if a request was successful. The main groups are:
 
 ### Exercise: Use Open Movie Database API to fetch Harry Potter films and make a poster gallery.
 
-1. Make an API call to `http://omdbapi.com/<querystring>` in `poster-gallery/script.js`. Look at the [documentation](http://omdbapi.com/) to work out which url to use. You should expect an array of 10 objects with a title, year, imdbID, Type, and Poster property e.g.
+1. Make an API call to OMDb movies (in `poster-gallery/script.js`) to get all the information they have on Harry Potter. Read the [documentation](http://omdbapi.com/) to try and work out the url you need to use. You should expect an array of 10 objects with a Title, Year, imdbID, Type, and Poster property e.g.
 
 ```
 {
@@ -92,6 +92,8 @@ Search: [
     ...
   }
 ```
+
+The structure of the url will look like `http://omdbapi.com/<querystring>`. You will need to create an API key here: http://omdbapi.com/apikey.aspx and include it in your url.
 
 2. Filter out "Harry Potter and the Forbidden Journey" and "Harry Potter and the Chamber of Secrets" type:**game** out of the array.
 3. Iterate over the films and sort them by year, from oldest to newest film (Harry Potter and the Sorcerer's Stone to Harry Potter and the Deathly Hallows: Part 2)
