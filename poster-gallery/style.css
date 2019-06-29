@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Caveat:400,700&display=swap');
+
+body {
+  font-family: 'Caveat', cursive;
+  margin-left: 50px;
+}
+
+h1 {
+  font-weight: normal;
+  font-size: 50px;
+}
+
+.poster-gallery {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  max-width: 600px;
+}
+
+.poster {
+  height: 350px;
+}

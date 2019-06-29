@@ -13,6 +13,7 @@ Typical example of website using an external API of this type - ask the class fo
 ## Fetch API
 
 Fetch is a way of making API calls. It takes a url:
+
 ```
 https://api.github.com/users/chriscoyier/repos
 ```
@@ -33,7 +34,7 @@ fetch('https://api.github.com/users/chriscoyier/repos')
   })
   .catch(error => {
     console.log(error);
-  })
+  });
 ```
 
 Note: There are different HTTP methods other than GET. HTTP (Hypertext Transfer Protocol) is the way data is requested and provided on the internet.
@@ -44,6 +45,7 @@ Note: There are different HTTP methods other than GET. HTTP (Hypertext Transfer 
 **DELETE:** deletes data.
 
 #### JSON
+
 JSON is a lightweight format that allows data to be transferred across the web by using key-value pairs. When we send information between applications it needs to be packaged up, and unpackaged when it is received. We do this using `JSON.stringify()` to package and `JSON.parse()` to unpackage.
 
 ### Exercise: write a fetch request that lists your repos
@@ -51,6 +53,7 @@ JSON is a lightweight format that allows data to be transferred across the web b
 Let's inspect the `response` object we receive in more depth:
 
 - Type/copy the following into the console. Remember to replace `<githubhandle>` with yours:
+
 ```js
 fetch('https://api.github.com/users/<githubhandle>/repos')
   .then(function(data) {
@@ -58,21 +61,43 @@ fetch('https://api.github.com/users/<githubhandle>/repos')
   })
   .catch(function(error) {
     console.log(error);
-  })
+  });
 ```
+
 - Look at the object that comes back. Notice:
   - `Response.body`: the readable stream of the response's body.
   - `Response.headers`: HTTP headers allow the client and the server to pass additional information with the request or the response. An example are status codes.
 
 Status codes tell us if a request was successful. The main groups are:
+
 - 2: Success codes. e.g. `200`
 - 3: Redirection e.g. `302`
 - 4: Error, Unfound e.g. `404`
 - 5: Server Error e.g. `500`
 
-### Fix a broken API request
+### Exercise: Use Open Movie Database API to fetch Harry Potter films and make a poster gallery.
 
-- Clone the repo and open `fix-broken-request/index.html` in the browser. You will see that the API request is not working.
-- Open `main.js` and fix the broken code 😎
+1. Make an API call to OMDb movies (in `poster-gallery/script.js`) to get all the information they have on Harry Potter. Read the [documentation](http://omdbapi.com/) to try and work out the url you need to use. You should expect an array of 10 objects with a Title, Year, imdbID, Type, and Poster property e.g.
 
+```
+{
+Search: [
+    {
+      Title: "Harry Potter and the Deathly Hallows: Part 2",
+      Year: "2011",
+      imdbID: "tt1201607",
+      Type: "movie",
+      Poster: "https://m.media-amazon.com/images/M/MV5BMjIyZGU4YzUtNDkzYi00ZDRhLTljYzctYTMxMDQ4M2E0Y2YxXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg"
+    }
+    ...
+  }
+```
 
+The structure of the url will look like `http://omdbapi.com/<querystring>`. You will need to create an API key here: http://omdbapi.com/apikey.aspx and include it in your url.
+
+2. Filter out "Harry Potter and the Forbidden Journey" and "Harry Potter and the Chamber of Secrets" type:**game** out of the array.
+3. Iterate over the films and sort them by year, from oldest to newest film (Harry Potter and the Sorcerer's Stone to Harry Potter and the Deathly Hallows: Part 2)
+4. Iterate over sorted array and create array of poster urls.
+5. Add an image tag to the DOM for each of the posters, setting the src to the poster urls. Add a class of "poster" to each element. (The CSS has been done for you). The result should look like this:
+
+![](./poster-gallery/assets/poster-gallery.png)
