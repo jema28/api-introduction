@@ -77,7 +77,7 @@ Status codes tell us if a request was successful. The main groups are:
 
 ### Exercise: Use Open Movie Database API to fetch Harry Potter films and make a poster gallery.
 
-1. Make an API call to `http://omdbapi.com/<querystring>` in `poster-gallery/script.js`. Look at the documentation to work out which url to use. You should expect an array of 10 objects with a title, year, imdbID, Type, and Poster property e.g.
+1. Make an API call to `http://omdbapi.com/<querystring>` in `poster-gallery/script.js`. Look at the [documentation](http://omdbapi.com/) to work out which url to use. You should expect an array of 10 objects with a title, year, imdbID, Type, and Poster property e.g.
 
 ```
 {
