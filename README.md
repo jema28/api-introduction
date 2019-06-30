@@ -39,10 +39,10 @@ fetch('https://api.github.com/users/chriscoyier/repos')
 
 Note: There are different HTTP methods other than GET. HTTP (Hypertext Transfer Protocol) is the way data is requested and provided on the internet.
 
-**GET:** gets resources such as HTML, JS, CSS.
-**POST:** sends data to a server in the body of the request. The type of data is stored in the `Content-Type` header.
-**PUT:** creating or updating data (overwriting data if it already exists).
-**DELETE:** deletes data.
+- **GET:** gets resources such as HTML, JS, CSS.
+- **POST:** sends data to a server in the body of the request. The type of data is stored in the `Content-Type` header.
+- **PUT:** creating or updating data (overwriting data if it already exists).
+- **DELETE:** deletes data.
 
 #### JSON
 
