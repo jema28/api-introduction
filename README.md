@@ -171,6 +171,13 @@ We're trying to build a url that looks like this: `http://omdbapi.com/<query>&ap
 
 </details>
 
+Now, we have our expected result, we'll want to use array methods to complete the next section of the exercise. Note that your code should be in this section of the fetch request:
+```js
+.then(data => {
+  // write code here
+}
+```
+
 2. Filter out "Harry Potter and the Forbidden Journey" and "Harry Potter and the Chamber of Secrets" type:**game** out of the array.
 3. Iterate over the films and sort them by year, from oldest to newest film (Harry Potter and the Sorcerer's Stone to Harry Potter and the Deathly Hallows: Part 2)
 4. Iterate over sorted array and create array of poster urls.
