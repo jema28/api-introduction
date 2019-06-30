@@ -89,10 +89,8 @@ We're trying to build a url that looks like this: `http://omdbapi.com/<query>&ap
 
 ![](./poster-gallery/assets/by-search-parameters.png)
 
-You should expect an array of 10 objects with a Title, Year, imdbID, Type, and Poster property e.g.
-
 <details>
-  <summary>Expand to see expected result</summary>
+  <summary>You should expect an array of 10 objects with a Title, Year, imdbID, Type, and Poster property.</summary>
 
 ```js
 {
