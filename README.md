@@ -95,7 +95,7 @@ We're tyring to build a url that looks like this: `http://omdbapi.com/<query>&ap
 You should expect an array of 10 objects with a Title, Year, imdbID, Type, and Poster property e.g.
 
 <details>
-  <summary>Click to see result</summary>
+  <summary>Expand to see expected result</summary>
   ```
   {
     Title: "Harry Potter and the Deathly Hallows: Part 2",
