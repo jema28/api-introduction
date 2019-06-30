@@ -184,7 +184,3 @@ Now, we have our expected result, we'll want to use array methods to complete th
 5. Add an image tag to the DOM for each of the posters, setting the src to the poster urls. Add a class of "poster" to each element. (The CSS has been done for you). The result should look like this:
 
 ![](./poster-gallery/assets/poster-gallery.png)
-
-```
-
-```
