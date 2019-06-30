@@ -56,12 +56,9 @@ Let's inspect the `response` object we receive in more depth:
 
 ```js
 fetch('https://api.github.com/users/<githubhandle>/repos')
-  .then(function(data) {
-    console.log(data);
-  })
-  .catch(function(error) {
-    console.log(error);
-  });
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.log(error))
 ```
 
 - Look at the object that comes back. Notice:
