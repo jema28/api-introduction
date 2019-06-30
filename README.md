@@ -39,10 +39,10 @@ fetch('https://api.github.com/users/chriscoyier/repos')
 
 Note: There are different HTTP methods other than GET. HTTP (Hypertext Transfer Protocol) is the way data is requested and provided on the internet.
 
-**GET:** gets resources such as HTML, JS, CSS.
-**POST:** sends data to a server in the body of the request. The type of data is stored in the `Content-Type` header.
-**PUT:** creating or updating data (overwriting data if it already exists).
-**DELETE:** deletes data.
+- **GET:** gets resources such as HTML, JS, CSS.
+- **POST:** sends data to a server in the body of the request. The type of data is stored in the `Content-Type` header.
+- **PUT:** creating or updating data (overwriting data if it already exists).
+- **DELETE:** deletes data.
 
 #### JSON
 
@@ -56,12 +56,9 @@ Let's inspect the `response` object we receive in more depth:
 
 ```js
 fetch('https://api.github.com/users/<githubhandle>/repos')
-  .then(function(data) {
-    console.log(data);
-  })
-  .catch(function(error) {
-    console.log(error);
-  });
+  .then(response => response.json())
+  .then(data => console.log(data))
+  .catch(error => console.log(error))
 ```
 
 - Look at the object that comes back. Notice:
