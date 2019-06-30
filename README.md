@@ -77,9 +77,9 @@ Status codes tell us if a request was successful. The main groups are:
 
 ### Exercise: Use Open Movie Database API to fetch Harry Potter films and make a poster gallery.
 
-1. The first task is to make an API call to OMDb movies (in `poster-gallery/script.js`) to get all the harry potter information they have. To do this follow the steps below:
+1. The first task is to make an API call to OMDb movies (in `poster-gallery/script.js`) to get all the Harry Potter information they have. To do this follow the steps below:
 
-We're tyring to build a url that looks like this: `http://omdbapi.com/<query>&apiKey=<api-key>`.
+We're trying to build a url that looks like this: `http://omdbapi.com/<query>&apiKey=<api-key>`.
 
 - We've got the api domain name: `http://omdbapi.com/`. We now need a query and an API key.
 - Get your API key from http://omdbapi.com/apikey.aspx.
@@ -96,82 +96,84 @@ You should expect an array of 10 objects with a Title, Year, imdbID, Type, and P
 
 <details>
   <summary>Expand to see expected result</summary>
-  ```
-  {
-    Title: "Harry Potter and the Deathly Hallows: Part 2",
-    Year: "2011",
-    imdbID: "tt1201607",
-    Type: "movie",
-    Poster: "https://m.media-amazon.com/images/M/MV5BMjIyZGU4YzUtNDkzYi00ZDRhLTljYzctYTMxMDQ4M2E0Y2YxXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg"
-  },
-  {
-    Title: "Harry Potter and the Sorcerer's Stone",
-    Year: "2001",
-    imdbID: "tt0241527",
-    Type: "movie",
-    Poster: "https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg"
-  },
-  {
-    Title: "Harry Potter and the Chamber of Secrets",
-    Year: "2002",
-    imdbID: "tt0295297",
-    Type: "movie",
-    Poster: "https://m.media-amazon.com/images/M/MV5BMTcxODgwMDkxNV5BMl5BanBnXkFtZTYwMDk2MDg3._V1_SX300.jpg"
-  },
-  {
-    Title: "Harry Potter and the Prisoner of Azkaban",
-    Year: "2004",
-    imdbID: "tt0304141",
-    Type: "movie",
-    Poster: "https://m.media-amazon.com/images/M/MV5BMTY4NTIwODg0N15BMl5BanBnXkFtZTcwOTc0MjEzMw@@._V1_SX300.jpg"
-  },
-  {
-    Title: "Harry Potter and the Goblet of Fire",
-    Year: "2005",
-    imdbID: "tt0330373",
-    Type: "movie",
-    Poster: "https://m.media-amazon.com/images/M/MV5BMTI1NDMyMjExOF5BMl5BanBnXkFtZTcwOTc4MjQzMQ@@._V1_SX300.jpg"
-  },
-  {
-    Title: "Harry Potter and the Order of the Phoenix",
-    Year: "2007",
-    imdbID: "tt0373889",
-    Type: "movie",
-    Poster: "https://m.media-amazon.com/images/M/MV5BMTM0NTczMTUzOV5BMl5BanBnXkFtZTYwMzIxNTg3._V1_SX300.jpg"
-  },
-  {
-    Title: "Harry Potter and the Deathly Hallows: Part 1",
-    Year: "2010",
-    imdbID: "tt0926084",
-    Type: "movie",
-    Poster: "https://m.media-amazon.com/images/M/MV5BMTQ2OTE1Mjk0N15BMl5BanBnXkFtZTcwODE3MDAwNA@@._V1_SX300.jpg"
-  },
-  {
-    Title: "Harry Potter and the Half-Blood Prince",
-    Year: "2009",
-    imdbID: "tt0417741",
-    Type: "movie",
-    Poster: "https://m.media-amazon.com/images/M/MV5BNzU3NDg4NTAyNV5BMl5BanBnXkFtZTcwOTg2ODg1Mg@@._V1_SX300.jpg"
-  },
-  {
-    Title: "Harry Potter and the Chamber of Secrets",
-    Year: "2002",
-    imdbID: "tt0304140",
-    Type: "game",
-    Poster: "https://m.media-amazon.com/images/M/MV5BNTM4NzQ2NjA4NV5BMl5BanBnXkFtZTgwODAwMjE4MDE@._V1_SX300.jpg"
-  },
-  {
-    Title: "Harry Potter and the Forbidden Journey",
-    Year: "2010",
-    imdbID: "tt1756545",
-    Type: "movie",
-    Poster: "https://m.media-amazon.com/images/M/MV5BNDM0YzMyNGUtMTU1Yy00OTE2LWE5NzYtZDZhMTBmN2RkNjg3XkEyXkFqcGdeQXVyMzU5NjU1MDA@._V1_SX300.jpg"
-  }
-  ],
-    totalResults: "80",
-    Response: "True"
-  }
+
+```js
+{
+  Title: "Harry Potter and the Deathly Hallows: Part 2",
+  Year: "2011",
+  imdbID: "tt1201607",
+  Type: "movie",
+  Poster: "https://m.media-amazon.com/images/M/MV5BMjIyZGU4YzUtNDkzYi00ZDRhLTljYzctYTMxMDQ4M2E0Y2YxXkEyXkFqcGdeQXVyNTIzOTk5ODM@._V1_SX300.jpg"
+},
+{
+  Title: "Harry Potter and the Sorcerer's Stone",
+  Year: "2001",
+  imdbID: "tt0241527",
+  Type: "movie",
+  Poster: "https://m.media-amazon.com/images/M/MV5BNjQ3NWNlNmQtMTE5ZS00MDdmLTlkZjUtZTBlM2UxMGFiMTU3XkEyXkFqcGdeQXVyNjUwNzk3NDc@._V1_SX300.jpg"
+},
+{
+  Title: "Harry Potter and the Chamber of Secrets",
+  Year: "2002",
+  imdbID: "tt0295297",
+  Type: "movie",
+  Poster: "https://m.media-amazon.com/images/M/MV5BMTcxODgwMDkxNV5BMl5BanBnXkFtZTYwMDk2MDg3._V1_SX300.jpg"
+},
+{
+  Title: "Harry Potter and the Prisoner of Azkaban",
+  Year: "2004",
+  imdbID: "tt0304141",
+  Type: "movie",
+  Poster: "https://m.media-amazon.com/images/M/MV5BMTY4NTIwODg0N15BMl5BanBnXkFtZTcwOTc0MjEzMw@@._V1_SX300.jpg"
+},
+{
+  Title: "Harry Potter and the Goblet of Fire",
+  Year: "2005",
+  imdbID: "tt0330373",
+  Type: "movie",
+  Poster: "https://m.media-amazon.com/images/M/MV5BMTI1NDMyMjExOF5BMl5BanBnXkFtZTcwOTc4MjQzMQ@@._V1_SX300.jpg"
+},
+{
+  Title: "Harry Potter and the Order of the Phoenix",
+  Year: "2007",
+  imdbID: "tt0373889",
+  Type: "movie",
+  Poster: "https://m.media-amazon.com/images/M/MV5BMTM0NTczMTUzOV5BMl5BanBnXkFtZTYwMzIxNTg3._V1_SX300.jpg"
+},
+{
+  Title: "Harry Potter and the Deathly Hallows: Part 1",
+  Year: "2010",
+  imdbID: "tt0926084",
+  Type: "movie",
+  Poster: "https://m.media-amazon.com/images/M/MV5BMTQ2OTE1Mjk0N15BMl5BanBnXkFtZTcwODE3MDAwNA@@._V1_SX300.jpg"
+},
+{
+  Title: "Harry Potter and the Half-Blood Prince",
+  Year: "2009",
+  imdbID: "tt0417741",
+  Type: "movie",
+  Poster: "https://m.media-amazon.com/images/M/MV5BNzU3NDg4NTAyNV5BMl5BanBnXkFtZTcwOTg2ODg1Mg@@._V1_SX300.jpg"
+},
+{
+  Title: "Harry Potter and the Chamber of Secrets",
+  Year: "2002",
+  imdbID: "tt0304140",
+  Type: "game",
+  Poster: "https://m.media-amazon.com/images/M/MV5BNTM4NzQ2NjA4NV5BMl5BanBnXkFtZTgwODAwMjE4MDE@._V1_SX300.jpg"
+},
+{
+  Title: "Harry Potter and the Forbidden Journey",
+  Year: "2010",
+  imdbID: "tt1756545",
+  Type: "movie",
+  Poster: "https://m.media-amazon.com/images/M/MV5BNDM0YzMyNGUtMTU1Yy00OTE2LWE5NzYtZDZhMTBmN2RkNjg3XkEyXkFqcGdeQXVyMzU5NjU1MDA@._V1_SX300.jpg"
+}
+],
+  totalResults: "80",
+  Response: "True"
+}
 ```
+
 </details>
 
 2. Filter out "Harry Potter and the Forbidden Journey" and "Harry Potter and the Chamber of Secrets" type:**game** out of the array.
