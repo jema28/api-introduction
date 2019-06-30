@@ -8,7 +8,7 @@ API calls follow a request/response pattern. We request information and we recei
 
 This week we'll be looking at your personal applications and at other applications and getting information from them. We will be querying others APIs for now but later, when we have our own servers, we will be querying our own.
 
-Typical example of website using an external API of this type - ask the class for examples. e.g. trivago / comparison websites
+Typical example of website using an external API of this type is trivago / comparison websites.
 
 ## Fetch API
 
